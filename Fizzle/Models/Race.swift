@@ -33,7 +33,7 @@ enum Race: String, CaseIterable {
         case .rawulf:
             return Stats(strength: 8, intelligence: 6, piety: 12, vitality: 10, dexterity: 8, speed: 8, personality: 10, karma: 0)
         case .faerie:
-            return Stats(strength: -3, intelligence: 2, piety: 2, vitality: -3, dexterity: 2, speed: 3, personality: 0, karma: 0)
+            return Stats(strength: 5, intelligence: 11, piety: 6, vitality: 6, dexterity: 10, speed: 14, personality: 12, karma: 0)
         case .mook:
             return Stats(strength: 10, intelligence: 10, piety: 6, vitality: 10, dexterity: 7, speed: 7, personality: 9, karma: 0)
         }
