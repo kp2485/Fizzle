@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Spell: Codable, Identifiable {
+struct Spell: Codable, Identifiable, Hashable {
+    static func == (lhs: Spell, rhs: Spell) -> Bool {
+        lhs.id == rhs.id
+    }
+    
     let id: UUID
     let name: String
     let realm: SpellRealm

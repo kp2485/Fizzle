@@ -8,7 +8,7 @@
 import Foundation
 
 /// Enum representing the available races in the game.
-enum Race: String, CaseIterable {
+enum Race: String, CaseIterable, Codable {
     case human, elf, dwarf, gnome, hobbit, lizardman, dracon, felpurr, rawulf, faerie, mook
     
     /// Initial stats for the race.

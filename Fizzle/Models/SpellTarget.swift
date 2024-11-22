@@ -5,7 +5,7 @@
 //  Created by Kyle Peterson on 11/21/24.
 //
 
-enum SpellTarget: Codable {
+enum SpellTarget: Codable, Hashable {
     case singleEnemy
     case multipleEnemies(Int?) // Optional: number of enemies (e.g., 3 monsters + power level). nil value attacks all enemies in a group, match the count when implementing.
     case allEnemies
