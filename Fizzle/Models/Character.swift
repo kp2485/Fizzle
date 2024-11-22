@@ -12,6 +12,8 @@ class Character {
     var race: Race
     var sex: Sex
     var profession: Profession
+    var skills: [Skill: Int]
+    var spells: [Spell]
     
     var baseStats: Stats
     var equipmentStatModifiers: Stats = Stats(strength: 0, intelligence: 0, piety: 0, vitality: 0, dexterity: 0, speed: 0, personality: 0, karma: 0)
@@ -29,9 +31,6 @@ class Character {
             karma: baseStats.karma + equipmentStatModifiers.karma + maladyStatModifiers.karma + spellStatModifiers.karma
         )
     }
-    
-    var skills: [Skill: Int]
-    var spells: [Spell]
     
     var experience: Int = 0
     var level: Int {
