@@ -13,7 +13,22 @@ class Character {
     var sex: Sex
     var profession: Profession
     
-    var stats: Stats
+    var baseStats: Stats
+    var equipmentStatModifiers: Stats = Stats(strength: 0, intelligence: 0, piety: 0, vitality: 0, dexterity: 0, speed: 0, personality: 0, karma: 0)
+    var maladyStatModifiers: Stats = Stats(strength: 0, intelligence: 0, piety: 0, vitality: 0, dexterity: 0, speed: 0, personality: 0, karma: 0)
+    var spellStatModifiers: Stats = Stats(strength: 0, intelligence: 0, piety: 0, vitality: 0, dexterity: 0, speed: 0, personality: 0, karma: 0)
+    var currentStats: Stats {
+        return Stats(
+            strength: baseStats.strength + equipmentStatModifiers.strength + maladyStatModifiers.strength + spellStatModifiers.strength,
+            intelligence: baseStats.intelligence + equipmentStatModifiers.intelligence + maladyStatModifiers.intelligence + spellStatModifiers.intelligence,
+            piety: baseStats.piety + equipmentStatModifiers.piety + maladyStatModifiers.piety + spellStatModifiers.piety,
+            vitality: baseStats.vitality + equipmentStatModifiers.vitality + maladyStatModifiers.vitality + spellStatModifiers.vitality,
+            dexterity: baseStats.dexterity + equipmentStatModifiers.dexterity + maladyStatModifiers.dexterity + spellStatModifiers.dexterity,
+            speed: baseStats.speed + equipmentStatModifiers.speed + maladyStatModifiers.speed + spellStatModifiers.speed,
+            personality: baseStats.personality + equipmentStatModifiers.personality + maladyStatModifiers.personality + spellStatModifiers.personality,
+            karma: baseStats.karma + equipmentStatModifiers.karma + maladyStatModifiers.karma + spellStatModifiers.karma
+        )
+    }
     
     var skills: [Skill: Int]
     var spells: [Spell]
@@ -116,7 +131,7 @@ class Character {
         self.race = race
         self.profession = profession
         self.sex = sex
-        self.stats = stats
+        self.baseStats = stats
         self.skills = [:]
         self.spells = []
     }
