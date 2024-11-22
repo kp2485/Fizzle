@@ -139,9 +139,4 @@ class SkillRepository {
             )
         ]
     }
-    
-    /// Retrieves skills of a specific type.
-    func getSkills(byType type: SkillType) -> [Skill] {
-        return skills.filter { $0.type == type }
-    }
 }
