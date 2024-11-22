@@ -11,31 +11,31 @@ import Foundation
 enum Race: String, CaseIterable {
     case human, elf, dwarf, gnome, hobbit, lizardman, dracon, felpurr, rawulf, faerie, mook
     
-    /// Stat modifiers for the race.
-    var statModifiers: Stats {
+    /// Initial stats for the race.
+    var initialStats: Stats {
         switch self {
         case .human:
-            return Stats(strength: 0, intelligence: 0, piety: 0, vitality: 0, dexterity: 0, speed: 0, personality: 0, karma: 0)
+            return Stats(strength: 9, intelligence: 8, piety: 8, vitality: 9, dexterity: 9, speed: 8, personality: 8, karma: 0)
         case .elf:
-            return Stats(strength: -1, intelligence: 2, piety: 1, vitality: -1, dexterity: 0, speed: 1, personality: 0, karma: 0)
+            return Stats(strength: 7, intelligence: 10, piety: 10, vitality: 7, dexterity: 9, speed: 9, personality: 8, karma: 0)
         case .dwarf:
-            return Stats(strength: 2, intelligence: -1, piety: 1, vitality: 2, dexterity: -2, speed: -1, personality: 0, karma: 0)
+            return Stats(strength: 11, intelligence: 6, piety: 10, vitality: 12, dexterity: 7, speed: 7, personality: 7, karma: 0)
         case .gnome:
-            return Stats(strength: -1, intelligence: 1, piety: 2, vitality: 0, dexterity: 0, speed: -1, personality: 0, karma: 0)
+            return Stats(strength: 10, intelligence: 7, piety: 13, vitality: 10, dexterity: 8, speed: 6, personality: 6, karma: 0)
         case .hobbit:
-            return Stats(strength: -2, intelligence: 1, piety: 1, vitality: 0, dexterity: 2, speed: 1, personality: 0, karma: 0)
+            return Stats(strength: 8, intelligence: 7, piety: 6, vitality: 9, dexterity: 10, speed: 7, personality: 13, karma: 0)
         case .lizardman:
-            return Stats(strength: 3, intelligence: -2, piety: -1, vitality: 3, dexterity: 0, speed: -2, personality: 0, karma: 0)
+            return Stats(strength: 12, intelligence: 5, piety: 5, vitality: 14, dexterity: 8, speed: 10, personality: 3, karma: 0)
         case .dracon:
-            return Stats(strength: 2, intelligence: 1, piety: 0, vitality: 2, dexterity: -1, speed: -1, personality: 0, karma: 0)
+            return Stats(strength: 10, intelligence: 7, piety: 6, vitality: 12, dexterity: 10, speed: 8, personality: 6, karma: 0)
         case .felpurr:
-            return Stats(strength: 0, intelligence: 0, piety: -1, vitality: 0, dexterity: 2, speed: 2, personality: 0, karma: 0)
+            return Stats(strength: 7, intelligence: 10, piety: 7, vitality: 7, dexterity: 10, speed: 12, personality: 10, karma: 0)
         case .rawulf:
-            return Stats(strength: 1, intelligence: -1, piety: 2, vitality: 1, dexterity: 0, speed: -1, personality: 1, karma: 1)
+            return Stats(strength: 8, intelligence: 6, piety: 12, vitality: 10, dexterity: 8, speed: 8, personality: 10, karma: 0)
         case .faerie:
             return Stats(strength: -3, intelligence: 2, piety: 2, vitality: -3, dexterity: 2, speed: 3, personality: 0, karma: 0)
         case .mook:
-            return Stats(strength: 2, intelligence: 0, piety: 0, vitality: 1, dexterity: 0, speed: 0, personality: 0, karma: 0)
+            return Stats(strength: 10, intelligence: 10, piety: 6, vitality: 10, dexterity: 7, speed: 7, personality: 9, karma: 0)
         }
     }
     
