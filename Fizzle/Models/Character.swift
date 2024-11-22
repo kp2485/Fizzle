@@ -95,7 +95,18 @@ class Character {
     
     var maximumHitPoints: Int = 0
     var currentHitPoints: Int = 0
-    var armorClass: Int = 0
+    
+//    var equipment: Equipment
+//    var armorClass: Int = 0
+//    
+//    var inventory: [Item]
+//    var currentWeight: Int {
+//        
+//    }
+//    var encumbrance: Int {
+//        
+//    }
+    
     var carryingCapacity: Int = 0
     
     init(name: String, race: Race, profession: Profession, sex: Sex, stats: Stats) {
