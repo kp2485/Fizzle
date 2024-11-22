@@ -12,7 +12,11 @@ class Character {
     var race: Race
     var sex: Sex
     var profession: Profession
+    
     var stats: Stats
+    
+    var skills: [Skill: Int]
+    var spells: [Spell]
     
     var experience: Int = 0
     var level: Int {
@@ -90,11 +94,9 @@ class Character {
         }
     }
     
-    var skills: [Skill: Int]
-    var spells: [Spell]
-    
     var maximumHitPoints: Int = 0
     var currentHitPoints: Int = 0
+    var carryingCapacity: Int = 0
     
 //    var equipment: Equipment
 //    var armorClass: Int = 0
@@ -107,7 +109,7 @@ class Character {
 //        
 //    }
     
-    var carryingCapacity: Int = 0
+    var maladies: [Malady] = []
     
     init(name: String, race: Race, profession: Profession, sex: Sex, stats: Stats) {
         self.name = name
