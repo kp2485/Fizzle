@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents a character's profession, defining their stat requirements, skill focuses, and spell books.
-enum Profession: String, Codable {
+enum Profession: String, Codable, CaseIterable {
     case fighter
     case thief
     case mage

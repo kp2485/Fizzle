@@ -1,5 +1,5 @@
 //
-//  Character.swift
+//  PartyMember.swift
 //  Fizzle
 //
 //  Created by Kyle Peterson on 11/21/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Character {
+class PartyMember {
     var name: String
     var race: Race
     var sex: Sex
